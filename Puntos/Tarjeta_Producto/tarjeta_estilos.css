@@ -1,0 +1,67 @@
+/* Bloque Principal: Contenedor de las tarjetas */
+.product-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px;  /* Espacio entre las tarjetas */
+  padding: 20px;
+  background-color: #f0f2f5;
+  font-family: sans-serif;
+}
+
+/* Bloque: Tarjeta de producto individual */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Elemento: Imagen dentro de la tarjeta */
+.product-card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* Elemento: Descripción del producto */
+.product-card__description {
+  margin-bottom: 20px;
+}
+
+.product-card__description h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product-card__description p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Elemento: Botón de la tarjeta */
+.product-card__button {
+  background-color: #03045E;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product-card__button:hover {
+  background-color: #0056b3;
+}
