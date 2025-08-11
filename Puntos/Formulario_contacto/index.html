@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="estilo_formulario.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Logo de la empresa" class="logo">
+        <h1>Formulario de Contacto</h1>
+    </header>
+
+    <main>
+        <form>
+
+            <div class="section-header">
+                <h2>Datos Personales</h2>
+            </div>
+            <section class="form-section">
+                <label>Nombre:
+                    <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+                </label>
+                <label>Teléfono:
+                    <input type="tel" name="telefono" placeholder="Ej: 3001234567" required>
+                </label>
+                <label>Correo electrónico:
+                    <input type="email" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                </label>
+            </section>
+
+            <div class="section-header">
+                <h2>¿Cómo deseas que te contactemos?</h2>
+            </div>
+            <section class="form-section">
+                <label><input type="radio" name="contacto" value="llamada"> Llamada</label>
+                <label><input type="radio" name="contacto" value="correo"> Correo electrónico</label>
+                <label><input type="radio" name="contacto" value="whatsapp"> WhatsApp</label>
+                <label><input type="radio" name="contacto" value="cualquiera"> Cualquiera de los anteriores</label>
+            </section>
+
+            <div class="section-header">
+                <h2>Motivo de tu contacto</h2>
+            </div>
+            <section class="form-section">
+                <label><input type="radio" name="motivo" value="informacion"> Información general sobre viajes</label>
+                <label><input type="radio" name="motivo" value="reserva"> Reserva o disponibilidad de un tour</label>
+                <label><input type="radio" name="motivo" value="pregunta"> Pregunta sobre un destino específico</label>
+                <label><input type="radio" name="motivo" value="servicios"> Servicios para grupos o empresas</label>
+                <label><input type="radio" name="motivo" value="sugerencias"> Sugerencias o comentarios</label>
+                <label>
+                    <input type="radio" name="motivo" value="otro"> Otro:
+                    <input type="text" name="otro_texto" placeholder="Especifica aquí">
+                </label>
+            </section>
+
+            <div class="section-header">
+                <h2>¿En qué horario prefieres ser contactado?</h2>
+            </div>
+            <section class="form-section">
+                <label><input type="radio" name="horario" value="mañana"> Mañana (8:00 a.m. – 12:00 p.m.)</label>
+                <label><input type="radio" name="horario" value="tarde"> Tarde (12:00 p.m. – 6:00 p.m.)</label>
+                <label><input type="radio" name="horario" value="noche"> Noche (6:00 p.m. – 9:00 p.m.)</label>
+                <label><input type="radio" name="horario" value="sin"> Sin preferencia</label>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

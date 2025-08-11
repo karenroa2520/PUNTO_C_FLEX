@@ -1,0 +1,30 @@
+.gallery {
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 1rem; 
+  width: 100%; 
+}
+
+.gallery__item {
+  flex: 1 1 200px; 
+  display: flex;
+  flex-direction: column; 
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(80, 68, 68, 0.1);
+  border-radius: 8px;
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto; 
+  display: block;
+  object-fit: cover; 
+}
+
+.gallery__caption {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+  color: #333;
+}
