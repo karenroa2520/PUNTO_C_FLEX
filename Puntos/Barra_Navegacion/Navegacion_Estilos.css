@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo y menú */
+    align-items: center; /* Alineación vertical */
+    padding: 1rem; /* Espaciado interno */
+    background-color: #03045E; /* Color de fondo */
+}
+
+.navbar__logo {
+    display: flex; /* Usar flexbox para alinear imagen y texto */
+    align-items: center; /* Alinear verticalmente la imagen y el texto */
+    color: #fff; /* Color del texto del logo */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.navbar__logo-image {
+    width: 50px; /* Ancho de la imagen del logo */
+    height: 50px; /* Alto de la imagen del logo */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    border-radius: 50%;
+}
+
+.navbar__logo-text {
+    font-size: 1.2rem; /* Tamaño de fuente del logo */
+}
+
+.navbar__menu {
+    display: flex; /* Distribución horizontal */
+    list-style: none; /* Sin viñetas */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+}
+
+.navbar__item {
+    margin-left: 2rem; /* Espacio entre los elementos del menú */
+}
+
+.navbar__link {
+    color: #fff; /* Color del texto del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.1rem; /* Tamaño de fuente del enlace */
+}
+
+.navbar__link:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
