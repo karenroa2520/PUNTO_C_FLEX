@@ -1,0 +1,101 @@
+/* styles.css - Encabezado con Flexbox */
+
+/* Reset simple */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables fáciles de modificar */
+:root{
+  --accent: #4D9DE0;
+  --text: #111;
+  --muted: #555;
+  --bg: #fff;
+  --gap: 16px;
+  --max-width: 900px;
+}
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor del encabezado */
+.section-header{
+  display: flex;                 /* usa flexbox */
+  align-items: flex-start;       /* alinear ícono y texto al tope */
+  gap: var(--gap);               /* espacio entre icono y texto */
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 18px;
+  border-radius: 10px;
+  background: #fbfbff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Estilo del icono */
+.header-icon{
+  flex: 0 0 auto;                /* no crece ni encoge; ocupa su tamaño */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+}
+
+/* Ajuste para SVG dentro del icono (opcional) */
+.header-icon svg{
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+/* Contenedor de texto ocupa el resto del espacio */
+.header-text{
+  flex: 1 1 auto;                /* ocupa lo que quede */
+  min-width: 0;                  /* importante para truncar y justificar en flex */
+}
+
+/* Título */
+.header-title{
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+/* Descripción: texto justificado */
+.header-desc{
+  color: var(--muted);
+  line-height: 1.5;
+  text-align: justify;           /* justificado */
+  font-size: 0.98rem;
+}
+
+/* Responsive pequeño: ícono más pequeño y texto más compacto */
+@media (max-width: 480px){
+  .section-header{
+    gap: 12px;
+    padding: 12px;
+  }
+  .header-icon{
+    width: 48px;
+    height: 48px;
+  }
+  .header-icon svg{
+    width: 32px;
+    height: 32px;
+  }
+  .header-title{
+    font-size: 1rem;
+  }
+  .header-desc{
+    font-size: 0.95rem;
+  }
+}

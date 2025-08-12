@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas Flex</title>
+    <link rel="stylesheet" href="estilo_tareas.css">
+</head>
+<body>
+    <main class="task-container" aria-label="Lista principal de tareas">
+        <h1>Lista de Tareas</h1>
+        
+        <ul class="task-list">
+            <li class="task-item">
+                <div class="task-content">
+                    <h3 class="task-title">Reunión de equipo</h3>
+                    <p class="task-description">Preparar presentación para la reunión semanal</p>
+                    <span class="task-status status-complete">Completado</span>
+                </div>
+            </li>
+            
+            <li class="task-item">
+                <div class="task-content">
+                    <h3 class="task-title">Revisar código</h3>
+                    <p class="task-description">Hacer code review del último pull request</p>
+                    <span class="task-status status-pending">Pendiente</span>
+                </div>
+            </li>
+            
+            <li class="task-item">
+                <div class="task-content">
+                    <h3 class="task-title">Actualizar documentación</h3>
+                    <p class="task-description">Agregar nuevas funcionalidades al README</p>
+                    <span class="task-status status-pending">Pendiente</span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="add-task">
+            <label for="taskSelect">Selecciona una tarea:</label>
+            <select id="taskSelect">
+                <option value="">-- Selecciona una tarea --</option>
+                <option value="Reunión de equipo">Reunión de equipo</option>
+                <option value="Revisar código">Revisar código</option>
+                <option value="Actualizar documentación">Actualizar documentación</option>
+            </select>
+        </div>
+    </main>
+</body>
+</html>
