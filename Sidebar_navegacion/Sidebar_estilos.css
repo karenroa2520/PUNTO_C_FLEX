@@ -1,0 +1,45 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  height: 100vh; /* Toda la altura de la pantalla */
+  background-color: #222;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Justifica verticalmente */
+  padding: 20px 0;
+}
+
+/* Lista del menú */
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre ítems */
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.menu li a:hover {
+  background-color: #3BB273;
+  color: white;
+  border-radius: 4px;
+}

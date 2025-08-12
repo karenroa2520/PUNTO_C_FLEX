@@ -2,105 +2,92 @@
 /* VARIABLES GLOBALES EN :root */
 /* ====================== */
 :root {
-    /* Color de fondo para el contenedor general */
-    --main-bg-contenedorPrincipal: #F0F4F8; /* azul grisáceo claro */
-
-    /* Color de fondo para los componentes individuales */
-    --main-bg-componentes: #DCE3EA; /* gris azulado suave */
-
-    /* Color de fondo para los botones principales */
-    --main-bg-botones: #4A90E2; /* azul brillante */
-
-    /* Color de fondo cuando el botón está en estado hover (clickeable) */
-    --main-bg-botonClickeable: #2C5FA5; /* azul oscuro */
+    --main-bg-contenedorPrincipal: #F0F4F8;
+    --main-bg-componentes: #DCE3EA;
+    --main-bg-botones: #4A90E2;
+    --main-bg-botonClickeable: #2C5FA5;
 }
 
-
 /* ====================== */
-/* ESTILOS GENERALES DEL BODY */
+/* BODY */
 /* ====================== */
 body {
-    margin: 0; /* Elimina los márgenes por defecto del navegador */
-    font-family: 'Segoe UI', sans-serif; /* Fuente principal utilizada en el sitio */
-    background-color: var(--main-bg-contenedorPrincipal); /* Usa la variable definida para el fondo */
-    padding: 30px; /* Espaciado interior alrededor del contenido */
-    text-align: center; /* Centra horizontalmente el texto */
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--main-bg-contenedorPrincipal);
+    padding: 30px;
+    text-align: center;
 }
 
 /* ====================== */
-/* ENCABEZADO PRINCIPAL (BEM: header-main__title) */
+/* TÍTULO */
 /* ====================== */
 .header-main__title {
-    font-size: 32px; /* Tamaño de fuente grande para el título */
-    color: black; /* Color del texto */
-    margin-bottom: 10px; /* Espaciado debajo del título */
+    font-size: 32px;
+    color: black;
+    margin-bottom: 10px;
 }
 
 /* ====================== */
-/* CONTENEDOR DE COMPONENTES (BEM: Componentes) */
+/* CONTENEDOR FLEX */
 /* ====================== */
 .Componentes {
-    text-align: center; /* Centra horizontalmente los bloques dentro del contenedor */
+    display: flex;                  /* Flexbox activo */
+    justify-content: center;        /* Centra horizontalmente los bloques */
+    flex-wrap: wrap;                 /* Permite que los bloques bajen si no caben */
+    gap: 20px;                       /* Espacio entre bloques */
 }
 
 /* ====================== */
-/* BLOQUE INDIVIDUAL DE COMPONENTE (BEM: Componentes__bloque) */
+/* BLOQUES */
 /* ====================== */
 .Componentes__bloque {
-    display: inline-block; /* Permite mostrar varios bloques en línea */
-    vertical-align: top; /* Alinea los bloques desde la parte superior */
-    background-color: var(--main-bg-componentes); /* Usa la variable para el color de fondo */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra sutil para resaltar el bloque */
-    width: 300px; /* Ancho fijo del bloque */
-    margin: 10px; /* Espaciado externo entre bloques */
-    padding: 20px; /* Espaciado interno del contenido */
-    box-sizing: border-box; /* Incluye borde y padding dentro del ancho total */
-    text-align: center; /* Centra el contenido dentro del bloque */
-    transition: transform 0.3s ease; /* Transición suave al aplicar transformaciones */
+    background-color: var(--main-bg-componentes);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-/* ====================== */
-/* EFECTO HOVER EN BLOQUE */
-/* ====================== */
 .Componentes__bloque:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño del bloque al pasar el cursor */
+    transform: scale(1.05);
 }
 
 /* ====================== */
-/* TÍTULO DENTRO DEL BLOQUE (BEM: Componentes__title) */
+/* TÍTULO DEL BLOQUE */
 /* ====================== */
 .Componentes__title {
-    font-size: 20px; /* Tamaño medio del texto */
-    color: #21092b; /* Color oscuro para mayor contraste */
-    margin-bottom: 10px; /* Espaciado debajo del título */
+    font-size: 20px;
+    color: #21092b;
+    margin-bottom: 10px;
 }
 
 /* ====================== */
-/* BOTÓN ENLACE (BEM: Componentes__bloque a) */
+/* BOTONES */
 /* ====================== */
 .Componentes__bloque a {
-    display: inline-block; /* Se comporta como un bloque en línea */
-    padding: 10px 15px; /* Espaciado interno del botón */
-    background-color: var(--main-bg-botones); /* Color de fondo definido en variables */
-    color: black; /* Color del texto del botón */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    border-radius: 5px; /* Bordes suavemente redondeados */
-    transition: background-color 0.3s ease; /* Transición suave al cambiar color de fondo */
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--main-bg-botones);
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* ====================== */
-/* EFECTO HOVER EN BOTÓN */
-/* ====================== */
 .Componentes__bloque a:hover {
-    background-color: var(--main-bg-botonClickeable); /* Cambia a un color más oscuro al pasar el cursor */
+    background-color: var(--main-bg-botonClickeable);
 }
 
-/* ====================== */
-/* RESPONSIVIDAD PARA DISPOSITIVOS PEQUEÑOS */
-/* ====================== */
 @media (max-width: 1024px) {
+    .Componentes {
+        flex-direction: column;  /* Pila los bloques en vertical */
+        align-items: center;     /* Centra los bloques en el eje horizontal */
+    }
     .Componentes__bloque {
-        width: 90%; /* En pantallas más pequeñas, el bloque ocupa casi todo el ancho disponible */
+        width: 90%;
     }
 }

@@ -1,0 +1,63 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Footer con flexbox */
+.footer {
+  display: flex;
+  justify-content: space-between; /* Espacio equitativo */
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  flex-wrap: wrap; /* Para que en pantallas pequeñas las columnas se acomoden */
+}
+
+/* Cada columna */
+.columna {
+  flex: 1;            /* Todas ocupan el mismo ancho */
+  margin: 10px;
+  min-width: 200px;   /* Evita que se haga demasiado estrecha */
+}
+
+.columna h3 {
+  margin-bottom: 10px;
+  color: #f4f4f4;
+}
+
+.columna p,
+.columna a {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.columna ul {
+  list-style: none;
+}
+
+.columna ul li {
+  margin-bottom: 5px;
+}
+
+.columna ul li a {
+  text-decoration: none;
+}
+
+.columna ul li a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Columnas una debajo de otra */
+    text-align: center;
+  }
+}
